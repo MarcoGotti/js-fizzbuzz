@@ -24,22 +24,22 @@ for (let i = 1; i <= 100; i++){
 
     if ((a == 0) && (b == 0)) {
        console.log('FizzBuzz'); 
-       let colMarkup = `<li class="box d-flex justify-content-center align-items-center">FizzBuzz</li>`;
+       let colMarkup = `<li class="box bg-danger d-flex justify-content-center align-items-center">FizzBuzz</li>`;
        listElement.insertAdjacentHTML('beforeend', colMarkup);      
     }
     else if (a == 0) {
         console.log('Fizz');
-        let colMarkup = `<li class="box d-flex justify-content-center align-items-center">Fizz</li>`;
+        let colMarkup = `<li class="box bg-success d-flex justify-content-center align-items-center">Fizz</li>`;
         listElement.insertAdjacentHTML('beforeend', colMarkup);
     }
     else if (b == 0) {
         console.log('Buzz');
-        let colMarkup = `<li class="box d-flex justify-content-center align-items-center">Buzz</li>`;
+        let colMarkup = `<li class="box bg-warning d-flex justify-content-center align-items-center">Buzz</li>`;
         listElement.insertAdjacentHTML('beforeend', colMarkup);    
     }
     else {
         console.log(i);
-        let colMarkup = `<li class="box d-flex justify-content-center align-items-center"> ${i} </li>`;
+        let colMarkup = `<li class="box bg-info d-flex justify-content-center align-items-center"> ${i} </li>`;
         listElement.insertAdjacentHTML('beforeend', colMarkup);      
     }
 
