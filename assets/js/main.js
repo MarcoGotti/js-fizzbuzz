@@ -22,15 +22,19 @@ for (let i = 1; i <= 100; i++){
     const a = i % 3;
     const b = i % 5;
 
-    if ((a == 0) && (b == 0)) {
-       console.log('FizzBuzz'); 
-       let colMarkup = `<li class="box bg-danger d-flex justify-content-center align-items-center">FizzBuzz</li>`;
-       listElement.insertAdjacentHTML('beforeend', colMarkup);      
+    if ((a == 0) && (b == 0)) { //with append
+       console.log('FizzBuzz');   
+       const liElement =  document.createElement('li');
+       liElement.classList.add('box', 'bg-danger', 'd-flex', 'justify-content-center', 'align-items-center');
+       liElement.append('FizzBuzz');
+       listElement.append(liElement);
     }
-    else if (a == 0) {
+    else if (a == 0) { //with append
         console.log('Fizz');
-        let colMarkup = `<li class="box bg-success d-flex justify-content-center align-items-center">Fizz</li>`;
-        listElement.insertAdjacentHTML('beforeend', colMarkup);
+        const liElement =  document.createElement('li');
+        liElement.classList.add('box', 'bg-success', 'd-flex', 'justify-content-center', 'align-items-center');
+        liElement.append('Fizz');
+        listElement.append(liElement);
     }
     else if (b == 0) {
         console.log('Buzz');
@@ -39,7 +43,7 @@ for (let i = 1; i <= 100; i++){
     }
     else {
         console.log(i);
-        let colMarkup = `<li class="box bg-info d-flex justify-content-center align-items-center"> ${i} </li>`;
+        let colMarkup = `<li class="box bg-primary d-flex justify-content-center align-items-center"> ${i} </li>`;
         listElement.insertAdjacentHTML('beforeend', colMarkup);      
     }
 
