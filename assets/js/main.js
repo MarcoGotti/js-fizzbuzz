@@ -16,7 +16,7 @@ Crea un container nel DOM , aggiungendo (attraverso la funzione append()) un ele
 Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
-const rowElement = document.querySelector('.row');
+const listElement = document.getElementById('list');
 
 for (let i = 1; i <= 100; i++){
     const a = i % 3;
@@ -24,31 +24,23 @@ for (let i = 1; i <= 100; i++){
 
     if ((a == 0) && (b == 0)) {
        console.log('FizzBuzz'); 
-       let colMarkup = `            <div class="col">
-       <div class="d-flex justify-content-center align-items-center ratio ratio-1x1 bg-danger">FizzBuzz</div>
-   </div>`;
-       rowElement.insertAdjacentHTML('beforeend', colMarkup);      
+       let colMarkup = `<li class="box d-flex justify-content-center align-items-center">FizzBuzz</li>`;
+       listElement.insertAdjacentHTML('beforeend', colMarkup);      
     }
     else if (a == 0) {
         console.log('Fizz');
-        let colMarkup = `            <div class="col">
-        <div class="d-flex justify-content-center align-items-center ratio ratio-1x1 bg-success">Fizz</div>
-    </div>`;
-        rowElement.insertAdjacentHTML('beforeend', colMarkup);
+        let colMarkup = `<li class="box d-flex justify-content-center align-items-center">Fizz</li>`;
+        listElement.insertAdjacentHTML('beforeend', colMarkup);
     }
     else if (b == 0) {
         console.log('Buzz');
-        let colMarkup = `            <div class="col">
-        <div class="d-flex justify-content-center align-items-center ratio ratio-1x1 bg-warning">Buzz</div>
-    </div>`;
-        rowElement.insertAdjacentHTML('beforeend', colMarkup);    
+        let colMarkup = `<li class="box d-flex justify-content-center align-items-center">Buzz</li>`;
+        listElement.insertAdjacentHTML('beforeend', colMarkup);    
     }
     else {
         console.log(i);
-        let colMarkup = `            <div class="col">
-        <div class="d-flex justify-content-center align-items-center ratio ratio-1x1 bg-info"> ${i} </div>
-    </div>`;
-        rowElement.insertAdjacentHTML('beforeend', colMarkup);      
+        let colMarkup = `<li class="box d-flex justify-content-center align-items-center"> ${i} </li>`;
+        listElement.insertAdjacentHTML('beforeend', colMarkup);      
     }
 
 }
